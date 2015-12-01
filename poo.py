@@ -1,3 +1,6 @@
+# use poop() to print the top, use end() to print the bottom.
+
+
 def print_pipe():
     print("|", end = "")
 

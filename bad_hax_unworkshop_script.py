@@ -30,92 +30,160 @@ _+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
 _+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_
 """
 
-def print_pipe():
-	print("|", end="")
+local = 5
+locality = 3
+nonlocality = 1
+interlocality = 0
+delocality = 4
+paralocality = 6
+intralocality = 8
+prelocality = 9
+postlocality = 10
 
-def print_plus():
-	print("+", end="")
+localities = [local, locality, nonlocality, interlocality, delocality, paralocality, intralocality, prelocality, postlocality]
 
-def print_minus():
-	print("-", end="")
+def setup(pointless):
+	if not pointless:
+		def print_pipe():
+			print("|", end="")
 
-def print_slash():
-	print("/", end="")
+		def print_plus():
+			print("+", end="")
 
-def print_backslash():
-	print("\\", end="")
+		def print_minus():
+			print("-", end="")
 
-def print_underscore():
-	print("_", end="")
+		def print_slash():
+			print("/", end="")
 
-def print_period():
-	print(".", end="")
+		def print_backslash():
+			print("\\", end="")
 
-def print_whitespace():
-	print(" ", end="")
+		def print_underscore():
+			print("_", end="")
 
-def print_newline():
-	print("\n", end="")
+		def print_period():
+			print(".", end="")
 
-def print_bad():
-	for _ in range(4):
-		print_whitespace()
-	for _ in range(4):
-		print_pipe()
-		print_minus()
-	print_pipe()
-	for _ in range(6):
-		print_whitespace()
-	for _ in range(3):
-		print_pipe()
-		print_plus()
-	print_pipe()
-	for _ in range(5):
-		print_whitespace()
-	for _ in range(4):
-		print_pipe()
-		print_slash()
-	print_pipe()
-	print_newline()
+		def print_whitespace():
+			print(" ", end="")
 
-	for _ in range(4):
-		print_whitespace()
-	print("|-|    |-|   |+|     |+|   |/|     |/|")
+		def print_newline():
+			print("\n", end="")
 
-	for _ in range(4):
-		print_whitespace()
-	print("|-|-|-|-|    |+|+|+|+|+|   |/|      |/|")
+		global local
+		global locality
+		global nonlocality
+		global interlocality
+		global delocality
+		global paralocality
+		global intralocality
+		global prelocality
+		global postlocality
 
-	for _ in range(4):
-		print_whitespace()
-	print("|-|    |-|   |+|     |+|   |/|     |/|")
+		local = print_pipe
+		locality = print_plus
+		nonlocality = print_minus
+		interlocality = print_slash
+		delocality = print_backslash
+		paralocality = print_underscore
+		intralocality = print_period
+		prelocality = print_whitespace
+		postlocality = print_newline
 
-	for _ in range(4):
-		print_whitespace()
-	print("|-|-|-|-|    |+|     |+|   |/|/|/|/|")
+	else:
+		pass
 
-	print_newline()
+def print_bad_hax():
+	def print_first_line():
+		for _ in range(4):
+			prelocality()
+		for _ in range(4):
+			local()
+			nonlocality()
+		local()
+		for _ in range(6):
+			prelocality()
+		for _ in range(3):
+			local()
+			locality()
+		local()
+		for _ in range(5):
+			prelocality()
+		for _ in range(4):
+			local()
+			interlocality()
+		local()
+		postlocality()
 
-	for _ in range(4):
-		print_whitespace()
-	print("|/|    |\|      /-/\-\      \--\  /--/")
+		print_second_line()
+	
+	def print_second_line():
+		for _ in range(4):
+			prelocality()
+		print("|-|    |-|   |+|     |+|   |/|     |/|")
 
-	for _ in range(4):
-		print_whitespace()
-	print("|/|    |\|     /-/  \-\      \--\/--/")
+		print_third_line()
+	
+	def print_third_line():
+		for _ in range(4):
+			prelocality()
+		print("|-|-|-|-|    |+|+|+|+|+|   |/|      |/|")
 
-	for _ in range(4):
-		print_whitespace()
-	print("|/||||||\|    /-/====\-\      [----]")
+		print_fourth_line()
+	
+	def print_fourth_line():
+		for _ in range(4):
+			prelocality()
+		print("|-|    |-|   |+|     |+|   |/|     |/|")
 
-	for _ in range(4):
-		print_whitespace()
-	print("|/|    |\|   /-/      \-\    /--/\--\\")
+		print_fifth_line()
+	
+	def print_fifth_line():
+		for _ in range(4):
+			prelocality()
+		print("|-|-|-|-|    |+|     |+|   |/|/|/|/|")
+		postlocality()
 
-	for _ in range(4):
-		print_whitespace()
-	print("|/|    |\|  /-/        \-\  /--/  \--\\")
+		print_sixth_line()
+	
+	def print_sixth_line():
+		for _ in range(4):
+			prelocality()
+		print("|/|    |\|      /-/\-\      \--\  /--/")
 
-	print_newline()
+		print_seventh_line()
+	
+	def print_seventh_line():
+		for _ in range(4):
+			prelocality()
+		print("|/|    |\|     /-/  \-\      \--\/--/")
 
-print_bad()
+		print_eighth_line()
+	
+	def print_eighth_line():
+		for _ in range(4):
+			prelocality()
+		print("|/||||||\|    /-/====\-\      [----]")
+
+		print_ninth_line()
+	
+	def print_ninth_line():
+		for _ in range(4):
+			prelocality()
+		print("|/|    |\|   /-/      \-\    /--/\--\\")
+
+		print_tenth_line()
+	
+	def print_tenth_line():	
+		for _ in range(4):
+			prelocality()
+		print("|/|    |\|  /-/        \-\  /--/  \--\\")
+
+		postlocality()
+
+	print_first_line()
+
+for localilazationality in localities:
+	setup(localilazationality)
+print_bad_hax()

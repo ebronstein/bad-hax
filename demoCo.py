@@ -454,3 +454,5 @@ def walk_the_walk():
     print_bad_hax()
     end()
 
+walk_the_walk()
+
